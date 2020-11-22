@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"event-bus:latest","namespace":"dhbw-exercise-1"},"fieldPath":"spec.template.spec.containers[?(@.name==\"event-bus\")].image","pause":"false"}]'
+    app.openshift.io/connects-to: '[{"apiVersion":"apps/v1","kind":"Deployment","name":"posts"},{"apiVersion":"apps/v1","kind":"Deployment","name":"comments"},{"apiVersion":"apps/v1","kind":"Deployment","name":"query"},{"apiVersion":"apps/v1","kind":"Deployment","name":"moderation"}]'
   labels:
     app: event-bus
     app.kubernetes.io/component: event-bus
