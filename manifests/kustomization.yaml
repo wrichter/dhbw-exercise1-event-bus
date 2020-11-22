@@ -6,3 +6,4 @@ bases:
 images:
 - name: replace/me/event-bus
   newName: quay.io/wrichter/dhbw-exercise-1-event-bus
+  newTag: main
