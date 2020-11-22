@@ -9,6 +9,7 @@ metadata:
     app.kubernetes.io/component: event-bus
     app.kubernetes.io/instance: event-bus
     app.kubernetes.io/part-of: dhbw-exercise-1
+    app.openshift.io/runtime: nodejs
   name: event-bus
 spec:
   progressDeadlineSeconds: 600
