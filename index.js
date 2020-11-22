@@ -40,11 +40,11 @@ app.post('/events', (req, res) => {
     // hs006 add code to store the events received
     events.push(event);
 
-    axios.post('http://docker-compose_dhbw-exercise1-nodejs-posts_1:4000/events', event);
-    axios.post('http://docker-compose_dhbw-exercise1-nodejs-comments_1:4001/events', event);
-    axios.post('http://docker-compose_dhbw-exercise1-nodejs-query_1:4002/events', event);
+    axios.post('http://posts:4000/events', event);
+    axios.post('http://comments:4001/events', event);
+    axios.post('http://query:4002/events', event);
     // 005hs send data also to moderation service
-    axios.post('http://docker-compose_dhbw-exercise1-nodejs-moderation_1:4003/events', event);
+    axios.post('http://moderation:4003/events', event);
 
     res.send({status: 'ok event rec. and forwarded'});
 });
