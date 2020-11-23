@@ -4,7 +4,7 @@ metadata:
   name: event-bus
 spec:
   rules:
-    - host: event-bus-wrichter-dhbw-exercise-1.apps.osd-evalcluster.v0z2.p1.openshiftapps.com
+    - host: event-bus-dhbw-exercise-1.2886795283-80-kota02.environments.katacoda.com
       http:
         paths:
           - path: /
